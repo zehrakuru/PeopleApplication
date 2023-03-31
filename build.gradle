@@ -1,0 +1,40 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        roomVersion = '2.5.0'
+        appCompatVersion = '1.6.1'
+        ktxVersion = '1.7.0'
+        constraintLayoutVersion = '2.1.4'
+        jUnitVersion = '4.13.2'
+        eJUnitVersion = '1.1.5'
+        espressoVersion = '3.5.1'
+        lifecycleVersion = '2.6.0'
+        coroutinesVersion = '1.6.4'
+        daggerHiltVersion = '2.45'
+        daggerHiltCompilerVersion = '1.0.0'
+        navigationVersion = '2.5.3'
+        retrofitVersion = '2.9.0'
+        moshiConverterVersion = '2.9.0'
+        moshiVersion = '1.14.0'
+        leakCanaryVersion = '2.4'
+        gsonVersion = '2.10.1'
+        materialVersion = '1.8.0'
+        kotlin_version = '1.8.10'
+        retrofitInterceptorVersion = '5.0.0-alpha.10'
+        dengageVersion = '4.3.5'
+        serializationVersion = '1.5.0'
+    }
+
+    dependencies {
+        classpath 'androidx.navigation:navigation-safe-args-gradle-plugin:2.5.3'
+        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.42'
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigationVersion"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$daggerHiltVersion"
+    }
+}
+
+plugins {
+    id 'com.android.application' version '7.4.2' apply false
+    id 'com.android.library' version '7.4.2' apply false
+    id 'org.jetbrains.kotlin.android' version '1.8.0' apply false
+}

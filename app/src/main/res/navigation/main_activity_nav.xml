@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/homepageFragment">
+
+    <fragment
+        android:id="@+id/homepageFragment"
+        android:name="com.example.peopleapplication.ui.fragment.HomepageFragment"
+        android:label="fragment_homepage"
+        tools:layout="@layout/fragment_homepage" >
+        <action
+            android:id="@+id/personInfoTransition"
+            app:destination="@id/personInfoFragment" />
+        <action
+            android:id="@+id/registerPersonTransition"
+            app:destination="@id/registerPersonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personInfoFragment"
+        android:name="com.example.peopleapplication.ui.fragment.PersonInfoFragment"
+        android:label="fragment_person_info"
+        tools:layout="@layout/fragment_person_info" >
+        <argument
+            android:name="person"
+            app:argType="com.example.peopleapplication.data.entity.People" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerPersonFragment"
+        android:name="com.example.peopleapplication.ui.fragment.RegisterPersonFragment"
+        android:label="fragment_register_person"
+        tools:layout="@layout/fragment_register_person" />
+</navigation>
